@@ -17,6 +17,10 @@ public class CartTest
 		
 		// Test to print method
 		cart.print();
+		
+		// Test search methods
+		cart.searchByID(2);
+		cart.searchByTitle("aladin");
 	}
 
 }

@@ -1,6 +1,6 @@
 public class DigitalVideoDisc 
 {
-
+	
 	private String title;
 	private String category;
 	private String director;
@@ -57,7 +57,7 @@ public class DigitalVideoDisc
 	{
 		return title;
 	}
-
+	
 	public void setTitle(String title) 
 	{
 		this.title = title;
@@ -82,9 +82,8 @@ public class DigitalVideoDisc
 	{
 		return cost;
 	}
-	
-	public int getId() 
-	{
+
+	public int getId() {
 		return id;
 	}
 
@@ -93,6 +92,11 @@ public class DigitalVideoDisc
 	{
 		return id + ". DVD - " + title + " - " + category + " - " 
 				+ director + " - " + length	+ ": " + cost + "$"; 
+	}
+	
+	public boolean isMatch(String title)
+	{
+		return this.title.toLowerCase().equals(title.toLowerCase());
 	}
 
 }
