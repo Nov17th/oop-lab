@@ -1,0 +1,15 @@
+Q1: Try to add a method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd. Compare to an array parameter. What do you prefer in this case?
+A1: The choice of using varargs or an array parameter to pass an arbitrary number of DigitalVideoDisc objects to the addDigitalVideoDisc method depends on specific requirements and preferences. Varargs provide ease of use and readability, while an array parameter provides flexibility and type safety. If performance is a concern, an array parameter may be more efficient.
+
+
+Q2: After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain?
+A2: The method swap only swaps the values of the local variables o1 and o2, which are copies of the references to the original objects. The original objects and their titles are not affected by the method.
+
+Q3: After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed?
+A3: The method changeTitle changes the title of the object referred to by the dvd parameter, which is a reference to the jungleDVD object. The method does not change the cinderellaDVD object or its title.
+
+Q4: Is JAVA a Pass by Value or a Pass by Reference programming language?
+A4: Java is a pass-by-value programming language, where the value of the argument (which could be a reference value for objects) is copied and passed to the method.
+
+Q5: Write a toString() method for the DigitalVideoDisc class. What should be the return type of this method?
+A5: The toString() method returns a String representation of an object. For the DigitalVideoDisc class, it can be used to return a formatted String that displays the disc's details such as title, category, director, length, and cost.
