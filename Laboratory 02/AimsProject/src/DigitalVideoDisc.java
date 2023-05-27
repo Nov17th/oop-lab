@@ -40,12 +40,17 @@ public class DigitalVideoDisc
 		this.cost = cost;
 	}
 	
-	// Getters 
+	// Getters and setters
 	public String getTitle() 
 	{
 		return title;
 	}
-	
+
+	public void setTitle(String title) 
+	{
+		this.title = title;
+	}
+
 	public String getCategory() 
 	{
 		return category;
@@ -65,4 +70,5 @@ public class DigitalVideoDisc
 	{
 		return cost;
 	}
+	
 }
