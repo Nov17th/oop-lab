@@ -1,0 +1,17 @@
+package hust.soict.cybersec.garbage;
+
+import java.io.*;
+import java.nio.*;
+
+public class GarbageCreator 
+{
+	public static void main(String[] args)
+	{
+		String filename = "./test.exe";
+		byte[] inputBytes = {0};
+		long startTime, endTime;
+		
+		inputBytes = File.readAllBytes(Paths.get(filename));
+		
+	}
+}
