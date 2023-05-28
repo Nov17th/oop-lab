@@ -2,7 +2,7 @@ package hust.soict.cybersec.aims.media;
 
 import java.util.*;
 
-public class CompactDisc extends Disc
+public class CompactDisc extends Disc implements Playable
 {
 
 	private String artist;
@@ -68,6 +68,17 @@ public class CompactDisc extends Disc
 		}
 		
 		return length;
+	}
+
+	@Override
+	public void play() 
+	{
+		System.out.println("Playing CD: " + this.getTitle());
+		System.out.println("CD length: " + this.getLength());
+		for (Track track : tracks)
+		{
+			track.play();
+		}
 	}
 	
 }

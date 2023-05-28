@@ -1,6 +1,6 @@
 package hust.soict.cybersec.aims.media;
 
-public class DigitalVideoDisc extends Disc
+public class DigitalVideoDisc extends Disc implements Playable
 {
 	
 	// Constructors
@@ -39,6 +39,13 @@ public class DigitalVideoDisc extends Disc
 	public boolean isMatch(String title)
 	{
 		return this.getTitle().toLowerCase().equals(getTitle().toLowerCase());
+	}
+
+	@Override
+	public void play() 
+	{
+		System.out.println("Playing DVD: " + this.getTitle());
+		System.out.println("DVD length: " + this.getLength());		
 	}
 
 }
