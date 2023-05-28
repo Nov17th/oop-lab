@@ -1,30 +1,30 @@
 package hust.soict.cybersec.aims.store;
-import java.util.*;
 
-import hust.soict.cybersec.aims.media.DigitalVideoDisc;
+import java.util.*;
+import hust.soict.cybersec.aims.media.*;
 
 public class Store 
 {
 	
-	private ArrayList<DigitalVideoDisc> itemsInStore = new ArrayList<DigitalVideoDisc>();
+	private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 	
-	public void addDVD(DigitalVideoDisc dvd)
+	public void addMedia(Media media)
 	{
-		itemsInStore.add(dvd);
-		System.out.println(dvd.getTitle() + " has been added to the store.");
+		itemsInStore.add(media);
+		System.out.println(media.getTitle() + " has been added to the store.");
 	}
 	
-	public void removeDVD(DigitalVideoDisc dvd)
+	public void removeMedia(Media media)
 	{
-		boolean removed = itemsInStore.remove(dvd);
+		boolean removed = itemsInStore.remove(media);
 		
 		if (removed)
 		{
-			System.out.println(dvd.getTitle() + " has been removed from the store.");
+			System.out.println(media.getTitle() + " has been removed from the store.");
 		}
 		else
 		{
-			System.out.println(dvd.getTitle() + " is not found in the store.");
+			System.out.println(media.getTitle() + " is not found in the store.");
 		}
 	}
 	

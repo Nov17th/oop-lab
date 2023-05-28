@@ -57,4 +57,15 @@ public abstract class Media
 		this.title = title;
 	}
 
+	@Override
+	public String toString() 
+	{
+		return "Media: " + this.title + " - ID: " + this.id + " - Category: " + category + " - Cost: " + cost + "$";
+	}
+	
+	public boolean isMatch(String title)
+	{
+		return this.getTitle().toLowerCase().equals(getTitle().toLowerCase());
+	}
+
 }
