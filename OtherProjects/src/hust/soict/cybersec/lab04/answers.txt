@@ -3,3 +3,15 @@ A1: If the equals() method of the Media class is overridden to cast the Object p
 
 Q2: Iterate through the list of some media (CD, DVD or Book) and print out the information of the media by using toString() method. Observe what happens and explain in detail.
 A2: The toString() method is overridden in each subclass of Media to provide a customized string representation of the object. When call toString() on a Media object in the list, the appropriate overridden toString() method is called based on the actual type of the object.
+
+Q3: What class should implement the Comparable interface?
+A3: The Media class should implement the Comparable interface.
+
+Q4: In those classes, how should you implement the compareTo()method be to reflect the ordering that we want?
+A4: In the compareTo() method of the Media class, we should implement the desired ordering by comparing the properties of the objects, such as title and cost.
+
+Q5: Can we have two ordering rules of the item (by title then cost and by cost then title) if we use this Comparable interface approach?
+A5: No, we cannot have two ordering rules of the item if we use the Comparable interface approach. The compareTo() method can only implement one ordering rule.
+
+Q6: Suppose the DVDs has a different ordering rule from the other media types, that is by title, then decreasing length, then cost. How would you modify your code to allow this?
+A6: We can override the compareTo() method in Disc class to reflect the new ordering rule.

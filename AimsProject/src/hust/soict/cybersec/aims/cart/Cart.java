@@ -122,4 +122,22 @@ public class Cart
 		System.out.println("No match found.");
 	}
 	
+	// Sort item
+	public void sortByTitle()
+	{
+		Collections.sort(itemsOrdered, Media.COMPARE_BY_TITLE_COST);
+		for (Media media : itemsOrdered)
+		{
+			System.out.println(media);
+		}
+	}
+	
+	public void sortByCost()
+	{
+		Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
+		for (Media media : itemsOrdered)
+		{
+			System.out.println(media);
+		}
+	}
 }

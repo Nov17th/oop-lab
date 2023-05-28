@@ -41,6 +41,9 @@ public class Aims
 		// Removing a non-existent disc
 		DigitalVideoDisc dvd1 = new DigitalVideoDisc("Avatar");
 		anOrder.removeMedia(dvd1);
+		
+		// Sorting cart
+		anOrder.sortByTitle();
 	}
 
 }
