@@ -49,4 +49,10 @@ public class Book extends Media
 		}
 	}
 	
+	@Override
+	public String toString() 
+	{
+		return "Book: " + this.getTitle() + " - ID: " + this.getId() + " - Author(s): " + this.authors + " - Category: " + this.getCategory() + " - Cost: " + this.getCost() + "$";
+	}
+	
 }

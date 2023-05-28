@@ -1,2 +1,5 @@
 Q1: When overriding the equals() method of the Object class, you will have to cast the Object parameter obj to the type of Object that you are dealing with. If the passing object is not an instance of Media, what happens?
 A1: If the equals() method of the Media class is overridden to cast the Object parameter obj to a Media object, and the passing object is not an instance of Media, it will result in a ClassCastException. To avoid this issue, we can use the instanceof operator to check if the passed object is an instance of Media before casting it to a Media object.
+
+Q2: Iterate through the list of some media (CD, DVD or Book) and print out the information of the media by using toString() method. Observe what happens and explain in detail.
+A2: The toString() method is overridden in each subclass of Media to provide a customized string representation of the object. When call toString() on a Media object in the list, the appropriate overridden toString() method is called based on the actual type of the object.

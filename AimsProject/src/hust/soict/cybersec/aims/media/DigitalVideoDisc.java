@@ -33,6 +33,13 @@ public class DigitalVideoDisc extends Disc implements Playable
 	{
 		return this.getTitle().toLowerCase().equals(getTitle().toLowerCase());
 	}
+	
+	@Override
+	public String toString() 
+	{
+		return "DVD: " + this.getTitle() + " - ID: " + this.getId() + " - Category: " + this.getCategory() 
+					+ " - Director: " + this.getDirector() + " - Length: " + this.getLength() + " - Cost: " + this.getCost() + "$";
+	}
 
 	@Override
 	public void play() 
@@ -41,4 +48,5 @@ public class DigitalVideoDisc extends Disc implements Playable
 		System.out.println("DVD length: " + this.getLength());		
 	}
 
+	
 }

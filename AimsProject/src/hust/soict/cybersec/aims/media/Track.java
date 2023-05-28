@@ -32,6 +32,12 @@ public class Track implements Playable
 	}
 
 	@Override
+	public String toString() 
+	{
+		return "[Track: " + this.getTitle() + " - Length: " + this.getLength() + "]";
+	}
+	
+	@Override
 	public boolean equals(Object obj) 
 	{
 		if (obj == this) return true;

@@ -60,7 +60,7 @@ public abstract class Media
 	@Override
 	public String toString() 
 	{
-		return "Media: " + this.title + " - ID: " + this.id + " - Category: " + category + " - Cost: " + cost + "$";
+		return "Media: " + this.title + " - ID: " + this.id + " - Category: " + this.category + " - Cost: " + this.cost + "$";
 	}
 	
 	public boolean isMatch(String title)

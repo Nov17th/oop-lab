@@ -12,14 +12,20 @@ public class Aims
 		Cart anOrder = new Cart();
 		
 		// Create new DVD objects and add them to the cart
-		DigitalVideoDisc dvd1 = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
-		anOrder.addMedia(dvd1);
+		DigitalVideoDisc dvd = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
+		anOrder.addMedia(dvd);
 		
-		Book dvd2 = new Book("Star Wars", "Science Fiction", 87);
-		anOrder.addMedia(dvd2);
+		Book book = new Book("Star Wars", "Science Fiction", 87);
+		book.addAuthor("Steve");
+		book.addAuthor("John");
+		anOrder.addMedia(book);
 
-		CompactDisc dvd3 = new CompactDisc("Aladin", "Animation", "Artist", 18.99f);
-		anOrder.addMedia(dvd3);
+		CompactDisc cd = new CompactDisc("Aladin", "Animation", "Artist", 18.99f);
+		Track track1 = new Track("TrackName1", 1);
+		Track track2 = new Track("TrackName2", 2);
+		cd.addtrack(track1);
+		cd.addtrack(track2);
+		anOrder.addMedia(cd);
 		
 		// Print item in cart 
 		anOrder.print();
@@ -29,12 +35,12 @@ public class Aims
 		System.out.println(anOrder.totalCost());
 		
 		// Removing an existing disc
-		anOrder.removeMedia(dvd2);
+		anOrder.removeMedia(book);
 		anOrder.print();
 		
 		// Removing a non-existent disc
-		DigitalVideoDisc dvd4 = new DigitalVideoDisc("Avatar");
-		anOrder.removeMedia(dvd4);
+		DigitalVideoDisc dvd1 = new DigitalVideoDisc("Avatar");
+		anOrder.removeMedia(dvd1);
 	}
 
 }
