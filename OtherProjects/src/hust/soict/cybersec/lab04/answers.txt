@@ -1,0 +1,2 @@
+Q1: When overriding the equals() method of the Object class, you will have to cast the Object parameter obj to the type of Object that you are dealing with. If the passing object is not an instance of Media, what happens?
+A1: If the equals() method of the Media class is overridden to cast the Object parameter obj to a Media object, and the passing object is not an instance of Media, it will result in a ClassCastException. To avoid this issue, we can use the instanceof operator to check if the passed object is an instance of Media before casting it to a Media object.
