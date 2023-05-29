@@ -12,7 +12,7 @@ public class Aims
 		Cart anOrder = new Cart();
 		
 		// Create new DVD objects and add them to the cart
-		DigitalVideoDisc dvd = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 87, 19.95f);
+		DigitalVideoDisc dvd = new DigitalVideoDisc("The Lion King", "Animation", "Roger Allers", 19.95f);
 		anOrder.addMedia(dvd);
 		
 		Book book = new Book("Star Wars", "Science Fiction", 87);
@@ -23,12 +23,18 @@ public class Aims
 		CompactDisc cd = new CompactDisc("Aladin", "Animation", "Artist", 18.99f);
 		Track track1 = new Track("TrackName1", 1);
 		Track track2 = new Track("TrackName2", 2);
+		Track track3 = new Track("TrackName3", 0);
 		cd.addtrack(track1);
 		cd.addtrack(track2);
+		cd.addtrack(track3);
 		anOrder.addMedia(cd);
 		
 		// Print item in cart 
 		anOrder.print();
+		
+		// Playing media
+		cd.play();
+		dvd.play();
 		
 		// Print total cost of the items in the cart
 		System.out.println("Total Cost is: ");
