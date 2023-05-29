@@ -2,7 +2,7 @@ package hust.soict.cybersec.aims.media;
 
 import java.util.Comparator;
 
-public abstract class Media 
+public abstract class Media
 {
 
 	public static final Comparator<Media> COMPARE_BY_TITLE_COST = 
@@ -73,7 +73,7 @@ public abstract class Media
 	
 	public boolean isMatch(String title)
 	{
-		return this.getTitle().toLowerCase().equals(getTitle().toLowerCase());
+		return this.getTitle().toLowerCase().contains(title.toLowerCase());
 	}
 
 	@Override
@@ -81,7 +81,12 @@ public abstract class Media
 	{
 		if (obj == this) return true;
 		if (!(obj instanceof Media)) return false;
-		return ((Media) obj).getTitle() == this.getTitle();
+		return ((Media) obj).getTitle().contains(this.getTitle());
+	}
+	
+	public void play()
+	{
+		System.out.println("Playing media: " + this.title);
 	}
 	
 }

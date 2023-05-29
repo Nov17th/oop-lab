@@ -29,10 +29,6 @@ public class DigitalVideoDisc extends Disc implements Playable
 		super(title, category, director, length, cost);
 	}
 	
-	public boolean isMatch(String title)
-	{
-		return this.getTitle().toLowerCase().equals(getTitle().toLowerCase());
-	}
 	
 	@Override
 	public String toString() 
@@ -47,6 +43,7 @@ public class DigitalVideoDisc extends Disc implements Playable
 		if (this.getLength() <= 0)
 		{
 			System.out.println("The DVD " + this.getTitle() + " cannot be played.");
+			return;
 		}
 		System.out.println("Playing DVD: " + this.getTitle());
 		System.out.println("DVD length: " + this.getLength());		

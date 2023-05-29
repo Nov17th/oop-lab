@@ -94,7 +94,7 @@ public class Cart
 	}
 
 	// Search for item
-	public void searchByID(int id)
+	public Media searchByID(int id)
 	{
 		for (int i = 0; i < itemsOrdered.size(); ++i)
 		{
@@ -102,13 +102,14 @@ public class Cart
 			{
 				System.out.println("Match found: ");
 				System.out.println(itemsOrdered.get(i).toString());
-				return;
+				return itemsOrdered.get(i);
 			}
 		}
 		System.out.println("No match found.");
+		return null;
 	}
 	
-	public void searchByTitle(String title)
+	public Media searchByTitle(String title)
 	{
 		for (int i = 0; i < itemsOrdered.size(); ++i)
 		{
@@ -116,10 +117,11 @@ public class Cart
 			{
 				System.out.println("Match found: ");
 				System.out.println(itemsOrdered.get(i).toString());
-				return;
+				return itemsOrdered.get(i);
 			}
 		}
 		System.out.println("No match found.");
+		return null;
 	}
 	
 	// Sort item
@@ -139,5 +141,17 @@ public class Cart
 		{
 			System.out.println(media);
 		}
+	}
+	
+	// Get number of items in cart
+	public int getTotalItems()
+	{
+		return itemsOrdered.size();
+	}
+	
+	// Empty the cart
+	public void empty()
+	{
+		itemsOrdered.clear();
 	}
 }
