@@ -1,6 +1,0 @@
-Q1: What happens if users choose "Cancel"?
-A1: It will display the same as chosen "No".
-
-Q2: How to customize the option to users, e.g. only two options: "Yes" and "No", OR "I do" and "I don't"?
-A2: To customize the option, use showOptionDialog instead of using showConfirmDialog. 
-	View ChoosingOption.java in JavaBasics Project for detailed code.

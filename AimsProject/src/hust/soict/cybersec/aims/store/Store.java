@@ -111,6 +111,11 @@ public class Store
 	{
 		return itemsInStore.size();
 	}
+
+	public ArrayList<Media> getItemsInStore() 
+	{
+		return itemsInStore;
+	}
 	
 }
 
