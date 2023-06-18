@@ -10,45 +10,16 @@ public class Cart
 	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();	
 	
 	// Add and remove
-	public void addMedia(Media media)
+	public String addMedia(Media media)
 	{
 		if (itemsOrdered.size() >= MAX_NUMBERS_ORDERED)
 		{
-			System.out.println("The cart is almost full.");
+			return "The cart is almost full.";
 		}
 		else
 		{
 			itemsOrdered.add(media);
-			System.out.println("The media " + media.getTitle() + " has been added.");
-		}
-	}
-	
-	public void addMedia(Media[] mediaList)
-	{
-		if (itemsOrdered.size() + mediaList.length > MAX_NUMBERS_ORDERED)
-		{
-			System.out.println("The cart is almost full.");
-		}
-		else
-		{
-			for (int i = 0; i < mediaList.length; ++i)
-			{
-				addMedia(mediaList[i]);
-			}
-			System.out.println("All listed media have been added to the cart.");
-		}
-	}
-	
-	public void addMedia(Media media1, Media... mediaList)
-	{
-		if (itemsOrdered.size() + 1 + mediaList.length > MAX_NUMBERS_ORDERED)
-		{
-			System.out.println("The cart is almost full.");
-		}
-		else
-		{
-			addMedia(media1);
-			addMedia(mediaList);
+			return "The media " + media.getTitle() + " has been added.";
 		}
 	}
 
