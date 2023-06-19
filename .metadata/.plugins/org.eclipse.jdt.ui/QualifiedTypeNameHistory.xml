@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="hust.soict.cybersec.aims.media.Media"/>
     <fullyQualifiedTypeName name="java.util.Comparator"/>
     <fullyQualifiedTypeName name="java.io.IOException"/>
+    <fullyQualifiedTypeName name="java.awt.Frame"/>
+    <fullyQualifiedTypeName name="java.awt.TextField"/>
+    <fullyQualifiedTypeName name="java.awt.Container"/>
+    <fullyQualifiedTypeName name="java.awt.ComponentOrientation"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="hust.soict.cybersec.aims.store.Store"/>
+    <fullyQualifiedTypeName name="java.awt.Dimension"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.standard.Media"/>
+    <fullyQualifiedTypeName name="javax.swing.JPanel"/>
+    <fullyQualifiedTypeName name="java.awt.Font"/>
+    <fullyQualifiedTypeName name="java.awt.FlowLayout"/>
+    <fullyQualifiedTypeName name="hust.soict.cybersec.aims.media.Playable"/>
+    <fullyQualifiedTypeName name="java.awt.Color"/>
+    <fullyQualifiedTypeName name="hust.soict.cybersec.aims.media.Media"/>
+    <fullyQualifiedTypeName name="java.awt.event.ActionListener"/>
 </qualifiedTypeNameHistroy>
