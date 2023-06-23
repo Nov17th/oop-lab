@@ -2,12 +2,15 @@ package hust.soict.cybersec.aims.cart;
 
 import java.util.*;
 import hust.soict.cybersec.aims.media.*;
+import javafx.beans.Observable;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Cart 
 {
 	
 	public static final int MAX_NUMBERS_ORDERED = 20;
-	private ArrayList<Media> itemsOrdered = new ArrayList<Media>();	
+	private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
 	
 	// Add and remove
 	public String addMedia(Media media)
@@ -42,7 +45,7 @@ public class Cart
 	public float totalCost() 
 	{
 		float totalCost = 0;
-		
+
 		for (int i = 0; i < itemsOrdered.size(); ++i)
 		{
 			totalCost += itemsOrdered.get(i).getCost();
@@ -118,6 +121,11 @@ public class Cart
 	public int getTotalItems()
 	{
 		return itemsOrdered.size();
+	}
+
+	public ObservableList<Media> getItemsOrdered()
+	{
+		return itemsOrdered;
 	}
 	
 	// Empty the cart
