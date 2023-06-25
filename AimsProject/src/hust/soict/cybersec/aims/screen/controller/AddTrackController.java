@@ -1,4 +1,4 @@
-package hust.soict.cybersec.aims.screen;
+package hust.soict.cybersec.aims.screen.controller;
 
 import hust.soict.cybersec.aims.media.CompactDisc;
 import hust.soict.cybersec.aims.media.Track;

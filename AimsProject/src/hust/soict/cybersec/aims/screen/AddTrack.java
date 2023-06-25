@@ -1,6 +1,7 @@
 package hust.soict.cybersec.aims.screen;
 
 import hust.soict.cybersec.aims.media.CompactDisc;
+import hust.soict.cybersec.aims.screen.controller.AddTrackController;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
 import javafx.fxml.FXMLLoader;
@@ -30,7 +31,8 @@ public class AddTrack extends JFrame
 			{
 				try
 				{
-					FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/cybersec/aims/screen/addTrack.fxml"));
+					FXMLLoader loader = new FXMLLoader(getClass().getResource(
+							"/hust/soict/cybersec/aims/screen/fxml/addTrack.fxml"));
 
 					AddTrackController controller = new AddTrackController(CD);
 					loader.setController(controller);

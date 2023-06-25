@@ -1,6 +1,7 @@
 package hust.soict.cybersec.aims.screen;
 
 import hust.soict.cybersec.aims.cart.Cart;
+import hust.soict.cybersec.aims.screen.controller.CartScreenController;
 import hust.soict.cybersec.aims.store.Store;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -42,7 +43,7 @@ public class CartScreen extends JFrame
 				try
 				{
 					FXMLLoader loader = new FXMLLoader(
-							getClass().getResource("/hust/soict/cybersec/aims/screen/cart.fxml"));
+							getClass().getResource("/hust/soict/cybersec/aims/screen/fxml/cart.fxml"));
 					CartScreenController controller = new CartScreenController(store, cart);
 					loader.setController(controller);
 					Parent root = loader.load();

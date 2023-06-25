@@ -1,6 +1,7 @@
 package hust.soict.cybersec.aims.screen;
 
 import hust.soict.cybersec.aims.cart.Cart;
+import hust.soict.cybersec.aims.screen.controller.AddDigitalVideoDiscToStoreController;
 import hust.soict.cybersec.aims.store.Store;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -34,7 +35,8 @@ public class AddDigitalVideoDiscToStoreScreen extends JFrame
 			{
 				try
 				{
-					FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/cybersec/aims/screen/addDVD.fxml"));
+					FXMLLoader loader = new FXMLLoader(getClass().getResource(
+							"/hust/soict/cybersec/aims/screen/fxml/addDVD.fxml"));
 					AddDigitalVideoDiscToStoreController controller = new AddDigitalVideoDiscToStoreController(store, cart);
 					loader.setController(controller);
 					Parent root = loader.load();

@@ -1,6 +1,7 @@
 package hust.soict.cybersec.aims.screen;
 
 import hust.soict.cybersec.aims.cart.Cart;
+import hust.soict.cybersec.aims.screen.controller.AddCompactDiscToStoreController;
 import hust.soict.cybersec.aims.store.Store;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -33,7 +34,8 @@ public class AddCompactDiscToStoreScreen extends JFrame
 			{
 				try
 				{
-					FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/cybersec/aims/screen/addCD.fxml"));
+					FXMLLoader loader = new FXMLLoader(getClass().getResource(
+							"/hust/soict/cybersec/aims/screen/fxml/addCD.fxml"));
 
 					AddCompactDiscToStoreController controller = new AddCompactDiscToStoreController(store, cart);
 					loader.setController(controller);

@@ -1,7 +1,8 @@
-package hust.soict.cybersec.aims.screen;
+package hust.soict.cybersec.aims.screen.controller;
 
 import hust.soict.cybersec.aims.cart.Cart;
 import hust.soict.cybersec.aims.media.CompactDisc;
+import hust.soict.cybersec.aims.screen.*;
 import hust.soict.cybersec.aims.store.Store;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

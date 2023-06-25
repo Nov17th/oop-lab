@@ -1,6 +1,7 @@
 package hust.soict.cybersec.aims.screen;
 
 import hust.soict.cybersec.aims.cart.Cart;
+import hust.soict.cybersec.aims.screen.controller.AddBookToStoreController;
 import hust.soict.cybersec.aims.store.Store;
 import javafx.application.Platform;
 import javafx.embed.swing.JFXPanel;
@@ -32,7 +33,8 @@ public class AddBookToStoreScreen extends JFrame
 			{
 				try
 				{
-					FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/cybersec/aims/screen/addBook.fxml"));
+					FXMLLoader loader = new FXMLLoader(getClass().getResource(
+							"/hust/soict/cybersec/aims/screen/fxml/addBook.fxml"));
 
 					AddBookToStoreController controller = new AddBookToStoreController(store, cart);
 					loader.setController(controller);
