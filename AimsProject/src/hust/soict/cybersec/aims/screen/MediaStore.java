@@ -3,6 +3,7 @@ package hust.soict.cybersec.aims.screen;
 import java.awt.*;
 import java.awt.event.*;
 
+import javax.naming.LimitExceededException;
 import javax.swing.*;
 
 import hust.soict.cybersec.aims.media.*;
@@ -32,7 +33,14 @@ public class MediaStore extends JPanel
 		{
 			public void actionPerformed(ActionEvent e)
 			{
-				JOptionPane.showMessageDialog(null, cart.addMedia(media));
+				try
+				{
+					JOptionPane.showMessageDialog(null, cart.addMedia(media));
+				}
+				catch (LimitExceededException ex)
+				{
+					throw new RuntimeException(ex);
+				}
 			}
 		});
 		container.add(addToCartButton);

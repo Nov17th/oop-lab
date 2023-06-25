@@ -1,23 +1,26 @@
 package hust.soict.cybersec.aims.cart;
 
 import java.util.*;
+
 import hust.soict.cybersec.aims.media.*;
 import javafx.beans.Observable;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-public class Cart 
+import javax.naming.LimitExceededException;
+
+public class Cart
 {
-	
+
 	public static final int MAX_NUMBERS_ORDERED = 20;
 	private ObservableList<Media> itemsOrdered = FXCollections.observableArrayList();
-	
+
 	// Add and remove
-	public String addMedia(Media media)
+	public String addMedia(Media media) throws LimitExceededException
 	{
 		if (itemsOrdered.size() >= MAX_NUMBERS_ORDERED)
 		{
-			return "The cart is almost full.";
+			throw new LimitExceededException("ERROR: The cart is full.");
 		}
 		else
 		{
@@ -37,12 +40,12 @@ public class Cart
 				return;
 			}
 		}
-		
+
 		System.out.println("The media was not found in the cart.");
 	}
-	
+
 	// Calculate total cost
-	public float totalCost() 
+	public float totalCost()
 	{
 		float totalCost = 0;
 
@@ -50,7 +53,7 @@ public class Cart
 		{
 			totalCost += itemsOrdered.get(i).getCost();
 		}
-		
+
 		return totalCost;
 	}
 
@@ -82,7 +85,7 @@ public class Cart
 		System.out.println("No match found.");
 		return null;
 	}
-	
+
 	public Media searchByTitle(String title)
 	{
 		for (int i = 0; i < itemsOrdered.size(); ++i)
@@ -97,7 +100,7 @@ public class Cart
 		System.out.println("No match found.");
 		return null;
 	}
-	
+
 	// Sort item
 	public void sortByTitle()
 	{
@@ -107,7 +110,7 @@ public class Cart
 			System.out.println(media);
 		}
 	}
-	
+
 	public void sortByCost()
 	{
 		Collections.sort(itemsOrdered, Media.COMPARE_BY_COST_TITLE);
@@ -116,7 +119,7 @@ public class Cart
 			System.out.println(media);
 		}
 	}
-	
+
 	// Get number of items in cart
 	public int getTotalItems()
 	{
@@ -127,7 +130,7 @@ public class Cart
 	{
 		return itemsOrdered;
 	}
-	
+
 	// Empty the cart
 	public void empty()
 	{

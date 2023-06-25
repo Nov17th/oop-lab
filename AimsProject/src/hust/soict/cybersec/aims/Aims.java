@@ -4,6 +4,7 @@ import hust.soict.cybersec.aims.store.*;
 import hust.soict.cybersec.aims.media.*;
 import hust.soict.cybersec.aims.cart.Cart;
 
+import javax.naming.LimitExceededException;
 import java.util.*;
 
 public class Aims 
@@ -60,7 +61,7 @@ public class Aims
 		clearConsole();
 	}
 
-	public static void mediaDetailsMenu(Scanner scanner, Media media)
+	public static void mediaDetailsMenu(Scanner scanner, Media media) throws LimitExceededException
 	{
 		outer: while (true)
 		{
@@ -108,7 +109,7 @@ public class Aims
 		}
 	}
 	
-	public static void storeMenu(Scanner scanner)
+	public static void storeMenu(Scanner scanner) throws LimitExceededException
 	{
 		outer: while (true)
 		{
@@ -557,7 +558,7 @@ public class Aims
         System.out.println("Please choose a number: 0-1-2-3");
     }
 	
-	public static void main(String[] args) 
+	public static void main(String[] args) throws LimitExceededException
 	{
 		// Initially add media to store
 		initSetup();

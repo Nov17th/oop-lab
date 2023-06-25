@@ -3,10 +3,12 @@ package hust.soict.cybersec.test.cart;
 import hust.soict.cybersec.aims.media.*;
 import hust.soict.cybersec.aims.cart.Cart;
 
+import javax.naming.LimitExceededException;
+
 public class CartTest 
 {
 
-	public static void main(String[] args) 
+	public static void main(String[] args) throws LimitExceededException
 	{
 		// Create new cart
 		Cart cart = new Cart();
