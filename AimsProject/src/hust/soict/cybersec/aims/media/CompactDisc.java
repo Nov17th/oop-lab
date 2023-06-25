@@ -1,6 +1,7 @@
 package hust.soict.cybersec.aims.media;
 
 import java.util.*;
+import java.time.Duration;
 
 public class CompactDisc extends Disc implements Playable
 {
@@ -129,4 +130,15 @@ public class CompactDisc extends Disc implements Playable
 		}
 	}
 
+	public String playGUI()
+	{
+		StringBuilder output = new StringBuilder(
+				"Playing CD: " + this.getTitle() + "\n" + "CD length: " + formatDuration(this.getLength()) + "\n"
+						+ "\n");
+		for (Track track : tracks)
+		{
+			output.append(track.playGUI()).append("\n");
+		}
+		return output.toString();
+	}
 }

@@ -9,31 +9,24 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 
 import javax.swing.*;
-import java.io.IOException;
 
-public class CartScreen extends JFrame
+public class AddDigitalVideoDiscToStoreScreen extends JFrame
 {
-	private static Cart cart;
 	private static Store store;
+	private static Cart cart;
 
-	public static void main(String[] args)
-	{
-		new CartScreen(store, cart);
-	}
-
-	public CartScreen(Store store, Cart cart)
+	public AddDigitalVideoDiscToStoreScreen(Store store, Cart cart)
 	{
 		super();
-		CartScreen.store = store;
-		CartScreen.cart = cart;
+		AddDigitalVideoDiscToStoreScreen.store = store;
+		AddDigitalVideoDiscToStoreScreen.cart = cart;
 
 		JFXPanel fxPanel = new JFXPanel();
 		this.add(fxPanel);
 
-		this.setTitle("Cart");
+		this.setTitle("Add DVD");
 		this.setSize(1024, 768);
 		this.setVisible(true);
-		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		Platform.runLater(new Runnable()
 		{
 			@Override
@@ -41,14 +34,13 @@ public class CartScreen extends JFrame
 			{
 				try
 				{
-					FXMLLoader loader = new FXMLLoader(
-							getClass().getResource("/hust/soict/cybersec/aims/screen/cart.fxml"));
-					CartScreenController controller = new CartScreenController(store, cart);
+					FXMLLoader loader = new FXMLLoader(getClass().getResource("/hust/soict/cybersec/aims/screen/addDVD.fxml"));
+					AddDigitalVideoDiscToStoreController controller = new AddDigitalVideoDiscToStoreController(store, cart);
 					loader.setController(controller);
 					Parent root = loader.load();
 					fxPanel.setScene(new Scene(root));
 				}
-				catch (IOException e)
+				catch (Exception e)
 				{
 					e.printStackTrace();
 				}

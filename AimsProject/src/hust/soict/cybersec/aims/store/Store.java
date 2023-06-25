@@ -2,11 +2,12 @@ package hust.soict.cybersec.aims.store;
 
 import java.util.*;
 import hust.soict.cybersec.aims.media.*;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 
 public class Store 
 {
-	
-	private ArrayList<Media> itemsInStore = new ArrayList<Media>();
+	private ObservableList<Media> itemsInStore = FXCollections.observableArrayList();
 	
 	public void addMedia(Media media)
 	{
@@ -112,7 +113,7 @@ public class Store
 		return itemsInStore.size();
 	}
 
-	public ArrayList<Media> getItemsInStore() 
+	public ObservableList<Media> getItemsInStore()
 	{
 		return itemsInStore;
 	}

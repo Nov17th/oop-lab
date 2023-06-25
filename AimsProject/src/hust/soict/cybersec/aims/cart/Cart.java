@@ -133,4 +133,14 @@ public class Cart
 	{
 		itemsOrdered.clear();
 	}
+
+	public String placeOrder()
+	{
+		if (getTotalItems() <= 0)
+		{
+			return ("Your cart is currently empty, cannot place an order.");
+		}
+		empty();
+		return "An order has been created successfully!\n" + "Your cart is currently empty, keep shopping.";
+	}
 }

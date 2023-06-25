@@ -1,6 +1,7 @@
 package hust.soict.cybersec.aims.media;
 
-import java.util.Comparator;
+import java.time.*;
+import java.util.*;
 
 public abstract class Media
 {
@@ -77,8 +78,10 @@ public abstract class Media
 	@Override
 	public boolean equals(Object obj)
 	{
-		if (obj == this) return true;
-		if (!(obj instanceof Media)) return false;
+		if (obj == this)
+			return true;
+		if (!(obj instanceof Media))
+			return false;
 		return ((Media) obj).getTitle().contains(this.getTitle());
 	}
 
@@ -90,5 +93,12 @@ public abstract class Media
 	public String playGUI()
 	{
 		return "Playing media " + this.title;
+	}
+
+	public String formatDuration(int durationInSeconds)
+	{
+		Duration duration = Duration.ofSeconds(durationInSeconds);
+		return String.format("%02d:%02d", duration.toMinutes(),
+				duration.minusMinutes(duration.toMinutes()).getSeconds());
 	}
 }
