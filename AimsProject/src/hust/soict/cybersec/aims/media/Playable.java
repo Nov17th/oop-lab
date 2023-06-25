@@ -1,6 +1,10 @@
 package hust.soict.cybersec.aims.media;
 
-public interface Playable 
+import hust.soict.cybersec.aims.exception.PlayerException;
+
+public interface Playable
 {
 	public void play();
+
+	public String playGUI() throws PlayerException;
 }

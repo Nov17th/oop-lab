@@ -1,5 +1,7 @@
 package hust.soict.cybersec.aims.media;
 
+import hust.soict.cybersec.aims.exception.PlayerException;
+
 import java.util.*;
 import java.time.Duration;
 
@@ -130,7 +132,7 @@ public class CompactDisc extends Disc implements Playable
 		}
 	}
 
-	public String playGUI()
+	public String playGUI() throws PlayerException
 	{
 		StringBuilder output = new StringBuilder(
 				"Playing CD: " + this.getTitle() + "\n" + "CD length: " + formatDuration(this.getLength()) + "\n"

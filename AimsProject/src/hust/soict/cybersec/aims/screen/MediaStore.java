@@ -6,6 +6,7 @@ import java.awt.event.*;
 import javax.naming.LimitExceededException;
 import javax.swing.*;
 
+import hust.soict.cybersec.aims.exception.PlayerException;
 import hust.soict.cybersec.aims.media.*;
 import hust.soict.cybersec.aims.cart.*;
 
@@ -39,7 +40,7 @@ public class MediaStore extends JPanel
 				}
 				catch (LimitExceededException ex)
 				{
-					throw new RuntimeException(ex);
+					JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
 				}
 			}
 		});
@@ -56,7 +57,16 @@ public class MediaStore extends JPanel
 					dialog.setTitle(media.getTitle());
 					dialog.setSize(200, 100);
 
-					String mediaInfo = "<html>" + media.playGUI().replace("\n", "<br/>") + "</html>";
+					String mediaInfo = null;
+					try
+					{
+						mediaInfo = "<html>" + media.playGUI().replace("\n", "<br/>") + "</html>";
+					}
+					catch (PlayerException ex)
+					{
+						JOptionPane.showMessageDialog(null, ex.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+						return;
+					}
 					JLabel mediaLabel = new JLabel(mediaInfo);
 					mediaLabel.setVerticalAlignment(JLabel.CENTER);
 					mediaLabel.setHorizontalAlignment(JLabel.CENTER);

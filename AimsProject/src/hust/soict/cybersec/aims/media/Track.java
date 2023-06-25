@@ -1,5 +1,7 @@
 package hust.soict.cybersec.aims.media;
 
+import hust.soict.cybersec.aims.exception.PlayerException;
+
 import java.time.Duration;
 
 public class Track implements Playable
@@ -45,9 +47,16 @@ public class Track implements Playable
 				duration.minusMinutes(duration.toMinutes()).getSeconds());
 	}
 
-	public String playGUI()
+	public String playGUI() throws PlayerException
 	{
-		return "Playing track: " + this.getTitle() + "\n" + "Track length: " + formatDuration(this.getLength());
+		if (this.getLength() > 0)
+		{
+			return "Playing track: " + this.getTitle() + "\n" + "Track length: " + formatDuration(this.getLength());
+		}
+		else
+		{
+			throw new PlayerException("ERROR: Track length is non-positive!");
+		}
 	}
 
 	@Override

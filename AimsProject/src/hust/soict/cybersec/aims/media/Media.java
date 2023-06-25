@@ -1,5 +1,7 @@
 package hust.soict.cybersec.aims.media;
 
+import hust.soict.cybersec.aims.exception.PlayerException;
+
 import java.time.*;
 import java.util.*;
 
@@ -90,7 +92,7 @@ public abstract class Media
 		System.out.println("Playing media: " + this.title);
 	}
 
-	public String playGUI()
+	public String playGUI() throws PlayerException
 	{
 		return "Playing media " + this.title;
 	}

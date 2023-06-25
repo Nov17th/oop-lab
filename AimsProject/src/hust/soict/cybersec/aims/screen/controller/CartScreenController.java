@@ -1,6 +1,7 @@
 package hust.soict.cybersec.aims.screen.controller;
 
 import hust.soict.cybersec.aims.cart.Cart;
+import hust.soict.cybersec.aims.exception.PlayerException;
 import hust.soict.cybersec.aims.media.Media;
 import hust.soict.cybersec.aims.media.Playable;
 import hust.soict.cybersec.aims.screen.AddBookToStoreScreen;
@@ -67,7 +68,7 @@ public class CartScreenController
 	}
 
 	@FXML
-	void btnPlayPressed(ActionEvent event)
+	void btnPlayPressed(ActionEvent event) throws PlayerException
 	{
 		Media media = tblMedia.getSelectionModel().getSelectedItem();
 		Alert alert = new Alert(Alert.AlertType.NONE, media.playGUI());
